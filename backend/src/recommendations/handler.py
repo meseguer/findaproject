@@ -1,8 +1,15 @@
 import json
 import discord
+import boto3
 
 def hello(event, context):
-    event = await getProjects()
+    dynamodb = boto3.resource('dynamodb', endpoint_url='http://localhost:8000')
+    projects = dynamodb.Table('projects')
+    response = projects.scan()
+    projects = response['Items']
+    for project in projects:
+        print(project['content'])
+
     body = {
         "message": "Go Serverless v1.0! Your function executed successfully!",
         "input": event
@@ -15,11 +22,3 @@ def hello(event, context):
 
     return response
 
-    # Use this code if you don't use the http event with the LAMBDA-PROXY
-    # integration
-    """
-    return {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "event": event
-    }
-    """
