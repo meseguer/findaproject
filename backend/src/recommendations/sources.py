@@ -2,7 +2,7 @@ import json
 import discord
 
 messages = []
-async def getProjects():
+def getProjects():
     client = discord.Client()
     await client.login('NTc2Nzc3NzE4NzcyMDA2OTMy.XNbcPA.AAWF1eQ_VdnY1FZxiZq2XJ89SK4')
     print('We have logged in as {0.user}'.format(client))
