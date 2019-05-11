@@ -1,7 +1,8 @@
 import json
-
+import discord
 
 def hello(event, context):
+    event = await getProjects()
     body = {
         "message": "Go Serverless v1.0! Your function executed successfully!",
         "input": event
