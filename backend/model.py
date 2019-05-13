@@ -57,3 +57,5 @@ from sklearn import metrics
 clf = MultinomialNB().fit(X_train, y_train)
 predicted= clf.predict(X_test)
 print("MultinomialNB Accuracy:",metrics.accuracy_score(y_test, predicted))
+
+# Use turicreate to show recommendations
