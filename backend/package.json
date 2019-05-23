@@ -21,6 +21,7 @@
     "chai": "^4.2.0",
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
     "mocha": "^6.1.4",
     "serverless-dynamodb-local": "^0.2.37",
     "serverless-offline": "^4.10.3",
