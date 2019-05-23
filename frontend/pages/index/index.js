@@ -107,7 +107,7 @@ function Album(props) {
             </div>
           </div>
         </div>
-        <ProjectList />
+        <ProjectList projects={cards} />
       </main>
     </React.Fragment>
   );
