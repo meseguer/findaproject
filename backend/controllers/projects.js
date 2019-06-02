@@ -2,8 +2,15 @@ const dynamoose = require('dynamoose');
 dynamoose.local();
 const { check, validationResult } = require('express-validator/check');
 
-exports.get_event = (req, res, next) => {
-  return res.send('Hello World :D!');
+exports.get_projects = (req, res, next) => {
+  const project = {
+    title: 'Greated project ever',
+    description: 'This is a gonna be a great project',
+    roles: ['Developer', 'Designer', 'Marketer'],
+    tags: ['food', 'videogames'],
+    url: 'http://crowdforge.io'
+  };
+  return res.send({ projects: [project] });
   // const { Event } = require('../models/event');
   // try {
   //   const response = await Event.query('name')
@@ -13,25 +20,6 @@ exports.get_event = (req, res, next) => {
   // } catch (error) {
   //   console.log(error);
   // }
-};
-
-exports.create_event = async (req, res, next) => {
-  // var name = req.body.name,
-
-  const { Event } = require('../models/event');
-  const newEvent = new Event({
-    userId: 5,
-    name: 'Adrisna',
-    title: 'My description',
-    teams: [{ name: 'lmao' }]
-  });
-  try {
-    const response = await newEvent.save(); // Returns a promise that resolves when save has completed
-    res.send('Hello World :D!' + JSON.stringify(response));
-  } catch (error) {
-    1;
-    console.log(error);
-  }
 };
 
 const { body } = require('express-validator/check');
