@@ -38,7 +38,6 @@ function List({ theme, projects }) {
     margin: 0 auto;
     padding: ${theme.spacing.unit * 8}px 0px ${theme.spacing.unit * 6}px;
   `;
-  console.log('Projects', projects);
   return (
     <Layout>
       <Grid container spacing={40}>

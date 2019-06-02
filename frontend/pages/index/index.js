@@ -1,29 +1,13 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { withStyles } from '@material-ui/core/styles';
-import Link from 'next/link';
 import { withTheme } from '@material-ui/core/styles';
+import Link from 'next/link';
 import styled from 'styled-components';
-
-import Nav from './../../components/Nav';
 import ProjectList from './components/List';
-
-const styles = theme => ({
-  appBar: {
-    position: 'relative'
-  },
-  icon: {
-    marginRight: theme.spacing.unit * 2
-  },
-  heroContent: {},
-  heroButtons: {}
-});
 
 class Homepage extends React.Component {
   static async getInitialProps() {
@@ -47,7 +31,7 @@ class Homepage extends React.Component {
     `;
 
     const HeroButtons = styled.div`
-      margin-top: ${theme.spacing.unit * 4};
+      margin-top: ${theme.spacing.unit * 4}px;
     `;
 
     return (
