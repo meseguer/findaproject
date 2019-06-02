@@ -4,5 +4,12 @@
       "path": "."
     }
   ],
-  "settings": {}
+  "settings": {
+    "files.exclude": {
+      "**/.dynamodb": true,
+      "**/node_modules/": true,
+      "dist/": false,
+      "lib/": false
+    }
+  }
 }
