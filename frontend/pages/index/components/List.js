@@ -12,7 +12,6 @@ import { CardContent } from '@material-ui/core';
 
 // eslint-disable-next-line react/prop-types
 function List({ theme, projects }) {
-  const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
   // Styled components
   const Layout = styled.div`
     text-align: center;
@@ -39,6 +38,7 @@ function List({ theme, projects }) {
     margin: 0 auto;
     padding: ${theme.spacing.unit * 8}px 0px ${theme.spacing.unit * 6}px;
   `;
+  console.log('Projects', projects);
   return (
     <Layout>
       <Grid container spacing={40}>

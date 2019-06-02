@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
@@ -25,19 +26,15 @@ const styles = theme => ({
 });
 
 class Homepage extends React.Component {
-  state = {
-    projects: []
-  };
-
-  async getInitialProps() {
-    const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
-    const data = await res.json();
-    this.setState({ projects: data.projects });
+  static async getInitialProps() {
+    return {
+      projects: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    };
   }
 
   render() {
     const { theme } = this.props;
-    const { projects } = this.state;
+    const { projects } = this.props;
 
     const HeroWrapper = styled.div`
       background-color: ${theme.palette.background.paper};
